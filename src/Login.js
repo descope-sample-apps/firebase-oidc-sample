@@ -60,7 +60,6 @@ const Login = () => {
   const signInWithDescope = async () => {
     try {
       const result = await firebase.auth().signInWithRedirect(provider);
-      console.log(result);
       if (result.additionalUserInfo.isNewUser) {
         const linkAccounts = window.confirm(
           "Do you want to link the new OIDC account with existing Firebase account?"
