@@ -4,24 +4,27 @@ import { useNavigate } from "react-router-dom";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import "firebase/auth";
 
-const uiConfig = {
-  signInFlow: "redirect",
-  signInSuccessUrl: "/dashboard",
-  signInOptions: [
-    {
-      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      requireDisplayName: true,
-    },
-  ],
-  callbacks: {
-    signInSuccessWithAuthResult: () => false,
-  },
-};
-
 const provider = new firebase.auth.OAuthProvider("oidc.descope");
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const uiConfig = {
+    signInFlow: "redirect",
+    signInSuccessUrl: "/dashboard",
+    signInOptions: [
+      {
+        provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        requireDisplayName: true,
+      },
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: () => {
+        navigate("/dashboard");
+      },
+    },
+  };
+
   useEffect(() => {
     firebase
       .auth()
@@ -46,16 +49,18 @@ const Login = () => {
                 console.log("Error linking accounts:", error);
               });
           }
+          navigate("/dashboard");
         }
       })
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, [navigate]);
 
   const signInWithDescope = async () => {
     try {
       const result = await firebase.auth().signInWithRedirect(provider);
+      console.log(result);
       if (result.additionalUserInfo.isNewUser) {
         const linkAccounts = window.confirm(
           "Do you want to link the new OIDC account with existing Firebase account?"
@@ -64,9 +69,11 @@ const Login = () => {
           firebase.auth().signInWithRedirect(provider);
         }
       } else {
+        console.log("Navigating to dashboard...");
         navigate("/dashboard");
       }
     } catch (error) {
+      console.log("CAUGHT ERROR!");
       if (error.code === "auth/account-exists-with-different-credential") {
         const email = error.email;
         const password = window.prompt(
@@ -98,7 +105,6 @@ const Login = () => {
         const currentUserData = currentUserDoc.data();
         const newUserData = newUserDoc.data();
 
-        // Add your merging logic here.
         const mergedData = {
           ...currentUserData,
           ...newUserData,
@@ -116,9 +122,30 @@ const Login = () => {
     }
   };
 
+  const styles = {
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      padding: "0 50px",
+    },
+  };
+
   return (
-    <div>
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+    <div style={styles.container}>
+      <div className="email-login-form">
+        <StyledFirebaseAuth
+          uiConfig={uiConfig}
+          firebaseAuth={firebase.auth()}
+        />
+      </div>
+      <div>
+        <br></br>
+        <br></br>
+        <p>OR</p>
+      </div>
       <button className="dashboard-btn" onClick={signInWithDescope}>
         Sign in with Descope
       </button>

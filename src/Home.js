@@ -12,10 +12,7 @@ function HomePage() {
   return (
     <>
       <div className="navbar">
-        <h2 className="sample-logo blue">Firebase</h2>
-        {/* <button className="login-btn" onClick={redirectToLogin}>
-          Login
-        </button> */}
+        <h2 className="sample-logo blue">Firebase App</h2>
       </div>
 
       <div className="home">
