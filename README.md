@@ -1,6 +1,4 @@
-# Firebase with Descope as OIDC Provider
-
-## Description
+# <a title="Firebase with Descope as OIDC Provider" href="https://firebase.google.com/"><img width="64" alt="firebase logo" src="https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg"></a> with Descope
 
 This is a very simple react app to demonstrate how to implement Descope as an OIDC provider with Firebase.
 
