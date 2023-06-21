@@ -4,11 +4,7 @@ This is a very simple react app to demonstrate how to implement Descope as an OI
 
 ## Project Setup
 
-The first thing you'll need to do is setup a Descope Project to use with Firebase.
-
-1. Create your Project and Configure your Flow Hosting URL
-
-You can sign up for Descope [here](https://www.descope.com/sign-up).
+1. Configure your Flow Hosting URL
 
 > **Note**: If you would like to implement Passkeys with Firebase, it is recommened to use pre-built flow `oidc-flow.json` file in the root of this directory. This can be downloaded and imported via the [Descope Console](https://app.descope.com/flows).
 
