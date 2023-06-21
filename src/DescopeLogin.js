@@ -8,7 +8,7 @@ export const DescopeLogin = () => {
       justifyContent: "center",
       alignItems: "center",
       height: "100vh",
-      padding: "0 50px",
+      padding: "50px",
     },
   };
 

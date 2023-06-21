@@ -1,24 +1,29 @@
-.container {
-  display: "flex";
-  flex-direction: "column";
-  justify-content: "center";
-  align-items: "center";
-  height: "100vh";
-  padding: "0 50px";
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: aliceblue;
 }
 
-.emailLoginForm {
-  margin-bottom: "20px";
-  width: "100%";
-  max-width: "400px";
+.card {
+  width: 400px;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
 }
 
-.dashboardBtn {
-  padding: "10px 20px";
-  font-size: "1rem";
-  color: "#fff";
-  background-color: "#007bff";
-  border: "none";
-  border-radius: "5px";
-  cursor: "pointer";
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+.firebaseui-container {
+  margin-top: 20px;
 }
