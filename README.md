@@ -16,6 +16,8 @@ http://localhost:3000/oidc-login
 
 This is where the Descope Flow component will be in this sample app. If you wish to modify the source code of this repo, you can modify the route in the `App.js` file to whatever you'd like.
 
+---
+
 2. Create `.env` for env variables;
 
 Next, you'll need to do is setup your Firebase Configuration to work with OIDC. Instructions can be found in this [blog](). Once that is complete you'll need to input your Firebase configuration settings into an `.env` file.
@@ -34,11 +36,15 @@ REACT_APP_FIREBASE_APP_ID=<Firebase App ID>
 REACT_APP_FIREBASE_MEASUREMENT_ID=<Firebase Measurement ID>
 ```
 
+---
+
 3. Install all of the packages
 
 You can install all of the necessary packages by running `yarn install`
 
 After these simple steps, you should be all set to test it out. This sample app uses [FirebaseUI](https://firebase.google.com/docs/auth/web/firebaseui) for the login screen, and showcases login with Descope via OIDC, and simple email/password.
+
+---
 
 ## Run
 
