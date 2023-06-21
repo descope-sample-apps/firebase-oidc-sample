@@ -44,8 +44,6 @@ You can install all of the necessary packages by running `yarn install`
 
 After these simple steps, you should be all set to test it out. This sample app uses [FirebaseUI](https://firebase.google.com/docs/auth/web/firebaseui) for the login screen, and showcases login with Descope via OIDC, and simple email/password.
 
----
-
 ## Run
 
 Run the program using:
