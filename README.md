@@ -8,7 +8,7 @@ This is a very simple react app to demonstrate how to implement Descope as an OI
 
 > **Note**: If you would like to implement Passkeys with Firebase, it is recommened to use pre-built flow `oidc-flow.json` file in the root of this directory. This can be downloaded and imported via the [Descope Console](https://app.descope.com/flows).
 
-In the Descope Console, make sure that your [Flow Hosting URL](https://app.descope.com/settings/authentication/sso) is set to:
+In the Descope Console, make sure that your [Flow Hosting URL](https://app.descope.com/settings/authentication/sso) is set to the following, if testing locally:
 
 ```
 http://localhost:3000/oidc-login
