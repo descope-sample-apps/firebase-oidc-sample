@@ -34,17 +34,6 @@ const Login = () => {
       </div>
     </div>
   );
-
-  // return (
-  //   <div className="container">
-  //     <div className="home">
-  //       <StyledFirebaseAuth
-  //         uiConfig={uiConfig}
-  //         firebaseAuth={firebase.auth()}
-  //       />
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default Login;
