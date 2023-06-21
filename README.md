@@ -1,10 +1,10 @@
-# <a title="Firebase with Descope as OIDC Provider" href="https://firebase.google.com/"><img width="64" alt="firebase logo" src="https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg"></a> with Descope
+# <a title="Firebase with Descope as OIDC Provider" href="https://firebase.google.com/"><img width="48" alt="firebase logo" src="https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg"></a> with Descope
 
 This is a very simple react app to demonstrate how to implement Descope as an OIDC provider with Firebase.
 
 ## Project Setup
 
-1. Configure your Flow Hosting URL
+### 1. Configure your Flow Hosting URL
 
 > **Note**: If you would like to implement Passkeys with Firebase, it is recommened to use pre-built flow `oidc-flow.json` file in the root of this directory. This can be downloaded and imported via the [Descope Console](https://app.descope.com/flows).
 
@@ -16,9 +16,7 @@ http://localhost:3000/oidc-login
 
 This is where the Descope Flow component will be in this sample app. If you wish to modify the source code of this repo, you can modify the route in the `App.js` file to whatever you'd like.
 
----
-
-2. Create `.env` for env variables;
+### 2. Create `.env` for env variables;
 
 Next, you'll need to do is setup your Firebase Configuration to work with OIDC. Instructions can be found in this [blog](). Once that is complete you'll need to input your Firebase configuration settings into an `.env` file.
 
@@ -36,9 +34,7 @@ REACT_APP_FIREBASE_APP_ID=<Firebase App ID>
 REACT_APP_FIREBASE_MEASUREMENT_ID=<Firebase Measurement ID>
 ```
 
----
-
-3. Install all of the packages
+### 3. Install all of the packages
 
 You can install all of the necessary packages by running `yarn install`
 
