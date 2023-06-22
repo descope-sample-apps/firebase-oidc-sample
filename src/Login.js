@@ -17,10 +17,10 @@ const Login = () => {
       },
       {
         provider: "oidc.descope",
-        fullLabel: "Sign in with Descope Passkeys",
-        buttonColor: "#000000",
+        fullLabel: "Sign in with Passkeys",
+        buttonColor: "#469CF3",
         iconUrl:
-          "https://images.ctfassets.net/xqb1f63q68s1/7D1PYGYvVgRNOBeiA6USQM/68b572056b5d38a769c71b0fba63b4e5/Descope_RGB_Icon-ForDarkBackground.svg",
+          "https://www.bio-key.com/wp-content/uploads/2021/03/fingerprint-2.png",
       },
     ],
     callbacks: {
