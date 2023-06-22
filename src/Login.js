@@ -11,8 +11,11 @@ const Login = () => {
   const uiConfig = {
     signInFlow: "redirect",
     signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      "oidc.descope",
+      {
+        provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        fullLabel: "Sign in with Email",
+      },
+      { provider: "oidc.descope", fullLabel: "Sign in With Descope Passkeys" },
     ],
     callbacks: {
       signInSuccessWithAuthResult: () => {
