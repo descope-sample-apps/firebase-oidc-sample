@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@descope/react-sdk": "^1.0.9",
+    "@descope/react-sdk": "2.3.9",
     "firebase": "^9.22.2",
     "firebaseui": "^6.0.2",
     "react": "^18.2.0",
